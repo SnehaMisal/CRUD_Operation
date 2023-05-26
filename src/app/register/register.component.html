@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>User Register !</mat-card-title>
+    </mat-card-header>
+    <form class="example-form" [formGroup]="reactiveform" (ngSubmit)="SaveUser()">
+        <mat-card-content>
+            <mat-form-field class="example-full-width">
+                <mat-label>User Name</mat-label>
+                <input matinput placeholder="user_name" formControlName="userName"></mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matinput placeholder="*****" type="password" formControlName="password"></mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matinput placeholder="info@gmail.com" type="email" formControlName="email"></mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Mobile No.</mat-label>
+                <input matinput placeholder="9876543210" type="tel" formControlName="mobile"></mat-form-field>
+            <div class="text-center">
+                <button mat-raised-button="mat-raised-button" color="primary">Register</button>
+                <button mat-raised-button color="accent" (click)="redirectToLogin()">Close</button>
+            </div>
+        </mat-card-content>
+    </form>
+</mat-card>
